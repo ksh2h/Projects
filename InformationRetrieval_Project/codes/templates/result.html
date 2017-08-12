@@ -1,0 +1,107 @@
+<html>
+  <head>
+    <title>
+      Graph Search Queries
+    </title>
+    <link rel="stylesheet" href="static/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/bootstrap-yeti.css"type="text/css">
+    <script src="static/jquery.min.js"></script>
+    <script src="static/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <h2>Search Results</h2>
+      </div>
+    </div>
+    <div class="well">
+      {% if num_match %}
+        <h6>{{num_match}} matches found in {{time_taken}} seconds.</h6>
+      {% else %}
+        <h4>Sorry.No Results found!!</h4>
+      {% endif %}
+    </div>
+    <div class="col-lg-10 col-lg-offset-1">
+      {% if flag %}
+        <h4>Error! Please enter a valid string!!</h4>
+      {% else %}
+        <div class="list-group">
+          {% for paper_id in range(0, result|length) %}
+            <a data-toggle='modal' data-target=#{{paper_id}} href="#" class="list-group-item">
+              <span class="badge"><h3 class="list-group-item-heading" style="color:white;">{{result[paper_id]['ID']}}</h3></span>
+              <p class="list-group-item-text" ><h5 style="color:black;">{{result[paper_id]['Title']}}</h5></p>
+            </a>
+          {% endfor %}
+        </div>
+
+
+        {% for paper_id in range(0, result|length) %}
+        <div id='{{paper_id}}' class="modal fade" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h3 class="modal-title"><strong>{{result[paper_id]['ID']}}</strong></h3>
+              </div>
+              <div class="modal-body">
+                <p><strong>Title : </strong>{{result[paper_id]['Title']}}</p>
+                <p><strong>Year : </strong>{{result[paper_id]['Year']}}</p>
+                <p><strong>Venue : </strong>{{result[paper_id]['Venue']}}</p>
+                <p><strong>Citers count : </strong>{{result[paper_id]['no of citers']}}</p>
+                {% if 'Co Authors' in result[paper_id] %}
+                  <p><strong>Co Author : </strong>{{result[paper_id]['Co Author(s)']}}
+                    {% for coa in result[paper_id]['Co Authors'] %}
+                      {{coa}},
+                    {% endfor %}
+                  </p>
+                {% endif %}
+
+                <p><strong>Field(s) : </strong>
+                  {% for field in result[paper_id]['Field'] %}
+                    {{field.replace("_"," ")}},
+                  {% endfor %}
+                </p>
+                <p><strong>Author(s) : </strong>
+                  {% for author in result[paper_id]['Authors'] %}
+                    {{author}},
+                  {% endfor %}
+                </p>
+                <p><strong>Citing Papers(s) : </strong>
+                  {% for cp in result[paper_id]['Citing Papers'] %}
+                    {{cp}},
+                  {% endfor %}
+                </p>
+                <p><strong>Keyword(s) : </strong>
+                  {% for keyword in result[paper_id]['Keywords'] %}
+                    {{keyword}},
+                  {% endfor %}
+
+                </p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+
+          </div>
+          </div>
+        {% endfor %}
+      {% endif %}
+      <table class="table table-striped table-hover">
+        <thead>
+          <tr>
+            <th>Suggestions</th>
+            <th>Difference</th>
+          </tr>
+        </thead>
+        {% for auth in reco %}
+          <tr>
+            <td>{{auth[0]}}</td>
+            <td>{{auth[1]}}</td>
+          </tr>
+        {% endfor %}
+      </table>
+    </div>
+  </body>
+</html>

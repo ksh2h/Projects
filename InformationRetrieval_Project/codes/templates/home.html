@@ -1,0 +1,40 @@
+<html>
+<head>
+  <title>
+    Graph Search Queries
+  </title>
+  <link rel="stylesheet" href="static/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="static/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <link rel="stylesheet" href="static/bootstrap-yeti.css"type="text/css">
+  <script src="static/jquery.min.js"></script>
+  <script src="static/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</head>
+<body>
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <h2>Graph Search Query on Scholarly Article Networks</h2>
+    </div>
+  </div>
+  <div class="col-lg-10 col-lg-offset-1">
+    <div class="well bs-component">
+      <form action='./result' class="form-horizontal" method="post">
+        <fieldset>
+          <div class="form-group">
+            <label for='query' class="control-label col-lg-2">Query : </label>
+            <div class="col-lg-10">
+              <input name='query' class='form-control' type="text" id="query" placeholder="Enter search query"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <a href="./query" target="_blank" class="btn btn-link">What are query formats ???</a>
+  </div>
+</body>
+</html>

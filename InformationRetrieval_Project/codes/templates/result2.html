@@ -1,0 +1,425 @@
+<html>
+  <head>
+    <title>
+      Graph Search Queries
+    </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://bootswatch.com/yeti/bootstrap.min.css"type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  </head>
+  <body>
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <h2>Search Results</h2>
+      </div>
+    </div>
+    <div class="well">
+      {% if num_match %}
+        <h6>{{num_match}} matches found in {{time_taken}} seconds.</h6>
+      {% else %}
+        <h4>Sorry.No Results found!!</h4>
+      {% endif %}
+    </div>
+    <div class="col-lg-10 col-lg-offset-1">
+      {% if flag %}
+        <h4>Error! Please enter a valid string!!</h4>
+      {% else %}
+        <h2 id="a1" > </h2>
+        <h2 id="a2" > </h2>
+        <h2 id="a3" > </h2>
+        <h2 id="a4" > </h2>
+        <h2 id="a5" > </h2>
+        <h2 id="a6" > </h2>
+        <h2 id="a7" > </h2>
+        <h2 id="a8" > </h2>
+        <h2 id="a9" > </h2>
+        <h2 id="a10" > </h2>
+        <h2 id="a11" > </h2>
+        <h2 id="a12" > </h2>
+        <h2 id="a13" > </h2>
+        <h2 id="a14" > </h2>
+        <h2 id="a15" > </h2>
+        <h2 id="a16" > </h2>
+        <h2 id="a17" > </h2>
+        <h2 id="a18" > </h2>
+        <h2 id="a19" > </h2>
+        <h2 id="a20" > </h2>
+        <h2 id="a21" > </h2>
+        <h2 id="a22" > </h2>
+        <h2 id="a23" > </h2>
+        <h2 id="a24" > </h2>
+        <div id="myDiv" style="width: 1000px; height: 500px;"><!-- Plotly chart will be drawn inside this DIV --></div>
+                  
+        <script >
+          var a=0;
+          var b=0;
+          var c=0;
+          var d=0;
+          var e=0;
+          var f=0;
+          var g=0;
+          var h=0;
+          var i=0;
+          var j=0;
+          var k=0;
+          var l=0;
+          var m=0;
+          var n=0;
+          var o=0;
+          var p=0;
+          var q=0;
+          var r=0;
+          var s=0;
+          var t=0;
+          var u=0;
+          var v=0;
+          var w=0;
+          var z=0;
+        </script>
+        
+        <div class="list-group">
+          {% for paper_id in result %}
+            <a data-toggle='modal' data-target=#{{paper_id}} href="#" class="list-group-item">
+              
+              {% for field in result[paper_id]['Field'] %}
+                    {% if field=='scientific_computing' %}
+                      
+                      
+                      <script>
+                        var a = ++a||1;
+                        if (a)
+                        {
+                          document.getElementById("a1").innerHTML = "scientific_computing->"+a;
+                        }
+                      </script>
+                      
+                    {% endif %}
+                    {% if field=='information_retrieval' %}
+                      
+                      
+                      <script>
+                        var b = ++b||1;
+                        if (b)
+                        {
+                          document.getElementById("a2").innerHTML = "information_retrieval->"+b;
+                        }
+
+                      </script>
+                      
+                    {% endif %}
+                    {% if field=='world_wide_web' %}
+                      
+                      
+                      <script>
+                        var c = ++c||1;
+                        if (c)
+                        {
+                          document.getElementById("a3").innerHTML = "world_wide_web->"+c;
+                        }
+
+                      </script>
+                      
+                    {% endif %}
+                    {% if field=='security_and_privacy' %}
+                      
+                      
+                      <script>
+                        var d = ++d||1;
+                        if (d)
+                        {
+                          document.getElementById("a4").innerHTML = "security_and_privacy->"+d;
+                        }
+
+                      </script>
+                      
+                    {% endif %}
+                    {% if field=='computer_education' %}
+                      
+                      
+                      <script>
+                        var e = ++e||1;
+                        if (e)
+                        {
+                          document.getElementById("a5").innerHTML = "computer_education->"+e;
+                        }
+
+                      </script>
+                      
+                    {% endif %}
+                    {% if field=='distributed_and_parallel_computing' %}
+                      
+                      
+                      <script>
+                        var f = ++f||1;
+                        if (f)
+                        {
+                          document.getElementById("a6").innerHTML = "distributed_and_parallel_computing->"+f;
+                        }
+
+                      </script>
+                      
+                    {% endif %}
+                    {% if field=='programming_languages' %}
+                      
+                      
+                      <script>
+                        var g = ++g||1;
+                        if (g)
+                        {
+                          document.getElementById("a7").innerHTML = "programming_languages->"+g;
+                        }
+
+                      </script>
+                      
+                    {% endif %}
+                    {% if field=='algorithms_and_theory' %}
+                      
+                      
+                      <script>
+                        var h = ++h||1;
+                        if (h)
+                        {
+                          document.getElementById("a8").innerHTML = "algorithms_and_theory->"+h;
+                        }
+
+                      </script>
+                      
+                    {% endif %}
+                    {% if field=='networks_and_communications' %}
+                      
+                      
+                      <script>
+                        var i = ++i||1;
+                        if (i)
+                        {
+                          document.getElementById("a9").innerHTML = "networks_and_communications->"+i;
+                        }
+
+                      </script>
+                      
+                    {% endif %}
+                    {% if field=='machine_learning_and_pattern_recognition' %}
+                      
+                      
+                      <script>
+                        var j = ++j||1;
+                        if (j)
+                        {
+                          document.getElementById("a10").innerHTML = "machine_learning_and_pattern_recognition->"+j;
+                        }
+
+                      </script>
+                      
+                    {% endif %}
+                    {% if field=='multimedia' %}
+                      
+                      
+                      <script>
+                        var k = ++k||1;
+                        if (k)
+                        {
+                          document.getElementById("a11").innerHTML = "multimedia->"+k;
+                        }
+
+                      </script>
+                      
+                    {% endif %}
+                    {% if field=='databases_' %}
+                      
+                      
+                      <script>
+                        var l = ++l||1;
+                        if (l)
+                        {
+                          document.getElementById("a12").innerHTML = "databases_->"+l;
+                        }
+
+                      </script>
+                      
+                    {% endif %}
+                    {% if field=='human_computer_interaction' %}
+                      
+                      
+                      <script>
+                        var m = ++m||1;
+                        if (m)
+                        {
+                          document.getElementById("a13").innerHTML = "human_computer_interaction->"+m;
+                        }
+
+                      </script>
+                      
+                    {% endif %}
+                    {% if field=='natural_language_and_speech' %}
+                      
+                      
+                      <script>
+                        var n = ++n||1;
+                        if (n)
+                        {
+                          document.getElementById("a14").innerHTML = "natural_language_and_speech->"+n;
+                        }
+
+                      </script>
+                      
+                    {% endif %}
+                    {% if field=='artificial_intelligence' %}
+                      
+                      
+                      <script>
+                        var o = ++o||1;
+                        if (o)
+                        {
+                          document.getElementById("a15").innerHTML = "artificial_intelligence->"+o;
+                        }
+
+                      </script>
+                      
+                    {% endif %}
+                    {% if field=='real_time_and_embedded_systems' %}
+                      
+                      
+                      <script>
+                        var p = ++p||1;
+                        if (p)
+                        {
+                          document.getElementById("a16").innerHTML = "real_time_and_embedded_systems->"+p;
+                        }
+
+                      </script>
+                      
+                    {% endif %}
+                    {% if field=='bioinformatics_and_computational_biology' %}
+                      
+                      
+                      <script>
+                        var q = ++q||1;
+                        if (q)
+                        {
+                          document.getElementById("a17").innerHTML = "bioinformatics_and_computational_biology->"+q;
+                        }
+
+                      </script>
+                      
+                    {% endif %}
+                    {% if field=='hardware_and_architecture' %}
+                      
+                      
+                      <script>
+                        var r = ++r||1;
+                        if (r)
+                        {
+                          document.getElementById("a18").innerHTML = "hardware_and_architecture->"+r;
+                        }
+
+                      </script>
+                      
+                    {% endif %}
+                    {% if field=='data_mining' %}
+                      
+                      
+                      <script>
+                        var s = ++s||1;
+                        if (s)
+                        {
+                          document.getElementById("a19").innerHTML = "data_mining->"+s;
+                        }
+
+                      </script>
+                      
+                    {% endif %}
+                    {% if field=='graphics' %}
+                      
+                      
+                      <script>
+                        var t = ++t||1;
+                        if (t)
+                        {
+                          document.getElementById("a20").innerHTML = "graphics->"+t;
+                        }
+
+                      </script>
+                      
+                    {% endif %}
+                    {% if field=='software_engineering' %}
+                      
+                      
+                      <script>
+                        var u = ++u||1;
+                        if (u)
+                        {
+                          document.getElementById("a21").innerHTML = "software_engineering->"+u;
+                        }
+
+                      </script>
+                      
+                    {% endif %}
+                    {% if field=='computer_vision' %}
+                      
+                      
+                      <script>
+                        var v = ++v||1;
+                        if (v)
+                        {
+                          document.getElementById("a22").innerHTML = "computer_vision->"+v;
+                        }
+
+                      </script>
+                      
+                    {% endif %}
+                    {% if field=='simulation' %}
+                      
+                      
+                      <script>
+                        var w = ++w||1;
+                        if (w)
+                        {
+                          document.getElementById("a23").innerHTML = "simulation->"+w;
+                        }
+
+                      </script>
+                      
+                    {% endif %}
+                    {% if field=='operating_systems' %}
+                      
+                      
+                      <script>
+                        var z = ++z||1;
+                        if (z)
+                        {
+                          document.getElementById("a24").innerHTML = "operating_systems->"+z;
+                        }
+
+                      </script>
+                      
+                    {% endif %}
+
+
+                    
+                  {% endfor %}
+
+
+
+              </h3>
+            </a>
+          {% endfor %}
+        
+
+
+        
+        <script>
+                      var data = [{
+                      x: ['scientific_computing','information_retrieval','world_wide_web','security_and_privacy','computer_education','distributed_and_parallel_computing','programming_languages','algorithms_and_theory','networks_and_communications','machine_learning_and_pattern_recognition','multimedia','databases_','human_computer_interaction','natural_language_and_speech','artificial_intelligence','real_time_and_embedded_systems','bioinformatics_and_computational_biology','hardware_and_architecture','data_mining','graphics','software_engineering','computer_vision','simulation','operating_systems'],
+                      y: [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,z],
+                      type: 'bar'
+                        }];
+
+                      Plotly.newPlot('myDiv', data);
+        </script>
+      {% endif %}
+    </div>
+  </body>
+</html>

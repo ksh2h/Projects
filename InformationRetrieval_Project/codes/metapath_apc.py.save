@@ -1,0 +1,29 @@
+import json
+'''
+f=open('../output-files/Authors.json','r')
+data=json.load(f)
+k=data["Authors"].keys()[0]
+print data["Authors"][k]["Papers"]
+f=open('../output-files/Papers.json','r')
+data=json.load(f)
+k=data["Papers"].keys()[0]
+print data["Papers"][k]['Venue']
+'''
+def metapathapc(a,c):
+	f=open('../output-files/Authors.json','r')
+	adata=json.load(f)
+	f=open('../output-files/Papers.json','r')
+	pdata=json.load(f)
+	k=adata["Authors"].keys()[0]
+	x=adata["Authors"][k]["Papers"][0]
+	if(x in pdata["Papers"].keys()):
+		print "xxxx"
+	else:
+		print "yyyyy"	
+	#print pdata["Papers"][x]["Venue"]
+	#if(x in pdata["Papers"].keys()):
+	#	print "xxxxx"
+	#print type(x)
+
+if __name__=="__main__":
+	metapathapc(0,0)
